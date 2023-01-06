@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Recordify</title>
+<script src="Media Devices API.js"></script>
+<script src="PiP API.js"></script>
+<link rel = "stylesheet" href = "Style Sheet.css">
+</head>
+
+<body>
+  	<div class="menu-bar sticky">
+		<img src="Images/banner.png" alt="IF logo">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="recipe.html">Recipes</a></li>
+			<li><a href="recordify.html">Recordify</a></li>
+			<li><a href="#">Find a Store</a></li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+	</div>
+	<h1 style="text-align:center; padding: 10px;">Record your cooking lifestyle using recordify!</h1>
+	<div class="video">
+		<p style="height: 496px">
+		<video id="video" autoplay style="width: 800px; height: 500px"/></p>
+		<button class="buttons" onclick="toggleRecording()">Start Recording</button>
+		<button class="buttons" onclick="toggleDownload()">Stop and Download</button>
+		<button class="buttons" onclick="togglePiP()">Use PiP</button>
+		<p> To go full screen, double click the screen!</p>	
+	</div>
+	
+    <footer>
+        <img src="Images/banner.png" alt="IF logo">
+        <p>© 2023 InstaFoodie, Inc. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
