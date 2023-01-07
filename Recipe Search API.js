@@ -38,12 +38,12 @@ function generateHTML(results) {
           }">View Recipe</a>
         </div>
         <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)}</p>
-        <p class="item-data">Diet label: ${
+        <p class="item-data">Diet: ${
           result.recipe.dietLabels.length > 0
             ? result.recipe.dietLabels
             : "No Nutritional Data"
         }</p>
-        <p class="item-data">Health labels: ${result.recipe.healthLabels}</p>
+        <p class="item-data">Health: ${result.recipe.healthLabels}</p>
       </div>
     `;
   });
