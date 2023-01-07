@@ -1,15 +1,19 @@
-﻿const constraints = { "video": { width: { max: 800 } }, "audio" : true };
+﻿// A variable that controls if audio will be captured and what resoulution will the video be in
+const constraints = { "video": { width: { max: 800 } }, "audio" : true };
 
+// Variables for the streaming, recording and chunks
 var videoStream;
 var videoRecord;
 var recordedChunks = [];
 
+// A function to get the media of the camera
 function toggleRecording() {
  	navigator.mediaDevices.getUserMedia(constraints)
 		.then(gotMedia)
 		.catch(e => { console.error('getUserMedia() failed: ' + e); });
 }
 
+// A function to get a video recording of the camara and check if such variables are available
 function gotMedia(stream) {
 	videoStream = stream;
   	var video = document.querySelector('video');
@@ -27,6 +31,7 @@ recorder.ondataavailable =
 	recorder.start(100);
 }
 
+// A function to download the recording in webm format
 function toggleDownload() {
   	videoRecord.stop();
   	videoStream.getTracks().forEach(track => { track.stop(); });
@@ -43,6 +48,7 @@ function toggleDownload() {
   	setTimeout(function() { URL.revokeObjectURL(url); }, 100); 
 }
 
+// A function to get the elements from the API
 function getFullscreenElement() {
 
 	return document.fullscreenElement
@@ -51,6 +57,7 @@ function getFullscreenElement() {
 		|| document.mozFullscreenElement;
 }
 
+// A function to enable the user to toggle fullscreen on the page selected
 function toggleFullscreen() {
 	if(getFullscreenElement())
 		{
@@ -67,5 +74,5 @@ function toggleFullscreen() {
 	});
 
 	document.addEventListener("fullscreenchange", () => {
-		console.log("full screen changed!");
+		console.log("Full Screen Initiated.");
 });

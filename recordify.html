@@ -10,6 +10,7 @@
 </head>
 
 <body>
+	<!-- Navigation Bar -->
   	<div class="menu-bar sticky">
 		<img src="Images/banner.png" alt="IF logo">
 		<ul>
@@ -20,17 +21,24 @@
 			<li><a href="#">About Us</a></li>
 		</ul>
 	</div>
-	<h1 style="text-align:center; padding: 10px;">Record your cooking lifestyle using recordify!</h1>
-	<div class="video">
-		<p style="height: 496px">
-		<video id="video" autoplay style="width: 800px; height: 500px"/></p>
-		<button class="buttons" onclick="toggleRecording()">Start Recording</button>
-		<button class="buttons" onclick="toggleDownload()">Stop and Download</button>
-		<button class="buttons" onclick="togglePiP()">Use PiP</button>
-		<p> To go full screen, double click the screen!</p>	
-	</div>
-	
-    <footer>
+	<h1 class="title" "style=" style="text-align:center; padding: 20px;">Record your cooking lifestyle using recordify!</h1>
+	<section class="centers-recordify">
+		<div class="video">
+			<p style="height: 496px">
+			<video id="video" autoplay style="width: 800px; height: 500px"/></p>
+			
+			<!-- Calls the function toggleRecording to start recording the camera -->
+			<button class="buttons" onclick="toggleRecording()">Start Recording</button>
+			<!-- Calls the function toggleDownload to stop recording and download the camera files -->
+			<button class="buttons" onclick="toggleDownload()">Stop and Download</button>
+			<!-- Calls the function togglePiP to initiate Picture in Picture -->
+			<button class="buttons" onclick="togglePiP()">Use PiP</button>
+			<p> To go full screen, double click the screen!</p>	
+		</div>
+	</section>
+
+	<footer>
+		<!-- Footer -->
         <img src="Images/banner.png" alt="IF logo">
         <p>© 2023 InstaFoodie, Inc. All rights reserved.</p>
     </footer>

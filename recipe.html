@@ -7,7 +7,7 @@
   <link rel = "stylesheet" href = "Style Sheet.css">
   </head>
 <body>
-
+	<!-- Navigation Bar -->
 	<div class="menu-bar sticky">
 		<img src="Images/banner.png" alt="IF logo">
 		<ul>
@@ -18,19 +18,23 @@
 			<li><a href="#">About Us</a></li>
 		</ul>
 	</div>
-
-  	<div class="container initial">
-    	<h1 class="brand">Search for recipies using InstaFoodie</h1>
+	
+  	<div class="search centers">
+    	<h1 class="title">Search for recipies using InstaFoodie</h1>
+    	<!-- To get the input from the user to enter to the API -->
     	<form>
-      		<input type="text" placeholder="Search Your Recipe...">
+      		<input type="text" placeholder="Enter an ingredient...">
     	</form>
-    	<div class="search-result">
+    	<!-- When the API gets the infromation from the database, new data will be inputted and will be printed using the recipes class -->
+    	<div class="recipes">
     	</div>
   	</div>
   
+  	<!-- Calls the API -->
 	<script src="Recipe Search API.js"></script>
 
     <footer>
+    	<!-- Footer -->
         <img src="Images/banner.png" alt="IF logo">
         <p>© 2023 InstaFoodie, Inc. All rights reserved.</p>
     </footer>

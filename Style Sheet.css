@@ -1,4 +1,5 @@
-﻿*{
+﻿/* For the entire HTML pages */
+*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -77,6 +78,7 @@ body {
 	font-size: 20px;
 }
 
+/* For he text chaning animation in index.html */
 .box{
 	font-size: 35px;
 	font-weight: bold;
@@ -164,6 +166,7 @@ body {
 	}
 }
 
+/* To make a white box for the recordify */
 .video{
   	margin: auto;
   	width: 800px;
@@ -194,6 +197,7 @@ body {
 
 }
 
+/* For the footer */
 footer {
   	background-color: #d9c671;
   	padding: 1.5rem;
@@ -206,23 +210,25 @@ footer img {
     max-width: 9vw;
 }
 
-section {
-  	min-height: 100vh;
-  	width: 100%;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	padding: 100px 0;
-  	background-color: rgb(26, 26, 27);
+/* To keep content at the center of the page */
+.centers-recordify {
+	min-height: 100vh;
 }
-.container {
+
+.centers {
+	min-height: 100vh;
+  	width: 100%;
+}
+
+/* CSS for the recipes.html page */
+.search {
   	width: 100%;
   	height: 90%;
   	max-width: 1200px;
   	margin: 0 auto;
   	padding: 20px;
 }
-.brand {
+.title {
   	text-align: center;
   	font-size: 2rem;
   	color: #ffa200;
@@ -245,7 +251,8 @@ input {
   	display: inline-block;
 }
 
-.search-result {
+/* When the API gets the information, creates a card with information*/
+.recipes {
   	margin-top: 50px;
   	width: 100%;
   	display: grid;
@@ -255,7 +262,7 @@ input {
 .item {
   	width: 100%;
   	border-radius: 8px;
-  	background-color: rgb(37, 37, 37);
+  	background-color: #d9c671;
   	padding: 15px;
   	overflow: hidden;
 }
@@ -269,8 +276,8 @@ input {
   	align-items: center;
   	justify-content: space-between;
 }
-.search-result .title {
-  	color: whitesmoke;
+.recipes .title {
+  	color: #ab7d00;
   	margin: 20px 10px 0 0;
   	font-size: 1.8rem;
   	font-weight: 400;
@@ -280,8 +287,8 @@ input {
   	text-align: center;
   	width: 130px;
   	padding: 10px 0;
-  	background-color: #404041;
-  	color: whitesmoke;
+  	background-color: #fbfcdc;
+  	color: #473400;
   	font-size: 1.4rem;
   	font-weight: 600;
   	margin-top: 20px;
@@ -289,10 +296,10 @@ input {
   	align-self: flex-start;
 }
 .item-data {
-  	color: whitesmoke;
+  	color: #473400;
   	display: block;
   	margin-top: 10px;
-  	font-size: 1.4rem;
+  	font-size: 1rem;
   	letter-spacing: 0.05rem;
   	line-height: 2rem;
 }
