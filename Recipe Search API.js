@@ -8,14 +8,14 @@ let searchQuery = "";
 const api_id = "2ed68843";
 const api_key = "4c7f745ba4c781aba6ad274cba998021";
 
-// Calls the API if something is entered in the input
+// Calls the API if something is entered in the input of the form
 formInput.addEventListener("submit", (e) => {
   e.preventDefault();
   searchQuery = e.target.querySelector("input").value;
   fetchAPI();
 });
 
-// A function is created to generate the new HTML and have variables for how many recipes are shown on screen
+// A function is created to generate the new HTML and have variables for how many recipes are shown on screen with the searchURL
 async function fetchAPI() {
   const searchURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${api_id}&app_key=${api_key}&from=0&to=9`;
   const response = await fetch(searchURL);
