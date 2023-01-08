@@ -5,8 +5,8 @@ const container = document.querySelector(".search");
 let searchQuery = "";
 
 // Putting the API key and ID from Edamam
-const APP_ID = "2ed68843";
-const APP_key = "4c7f745ba4c781aba6ad274cba998021";
+const api_id = "2ed68843";
+const api_key = "4c7f745ba4c781aba6ad274cba998021";
 
 // Calls the API if something is entered in the input
 formInput.addEventListener("submit", (e) => {
@@ -17,18 +17,18 @@ formInput.addEventListener("submit", (e) => {
 
 // A function is created to generate the new HTML and have variables for how many recipes are shown on screen
 async function fetchAPI() {
-  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=9`;
-  const response = await fetch(baseURL);
+  const searchURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${api_id}&app_key=${api_key}&from=0&to=9`;
+  const response = await fetch(searchURL);
   const data = await response.json();
-  generateHTML(data.hits);
+  HTML_change(data.hits);
   console.log(data);
 }
 
 // A function to generate HTML with the data from the API database
-function generateHTML(results) {
-  let generatedHTML = "";
+function HTML_change(results) {
+  let HTML_change_gen = "";
   results.map((result) => {
-    generatedHTML += `
+    HTML_change_gen += `
       <div class="item">
         <img src="${result.recipe.image}" alt="img">
         <div class="flex-container">
@@ -47,5 +47,5 @@ function generateHTML(results) {
       </div>
     `;
   });
-  recipe.innerHTML = generatedHTML;
+  recipe.innerHTML = HTML_change_gen;
 }
